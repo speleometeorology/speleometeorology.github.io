@@ -98,5 +98,20 @@
     © 2025 Speleometeorology · Hosted on GitHub Pages
   </footer>
 
+<!-- Bat confetti script -->
+<script>
+const NUM_BATS = 15; // number of bats
+for (let i = 0; i < NUM_BATS; i++) {
+  const bat = document.createElement('img');
+  bat.src = 'bat.png'; // path to your bat image
+  bat.className = 'bat';
+  bat.style.left = Math.random() * 100 + 'vw';
+  bat.style.top = Math.random() * -50 + 'vh'; // start above viewport
+  bat.style.animationDuration = (5 + Math.random() * 5) + 's';
+  bat.style.animationDelay = Math.random() * 5 + 's';
+  document.body.appendChild(bat);
+}
+</script>
+  
 </body>
 </html>

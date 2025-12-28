@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cave Maze</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<header>
+  <h1>🧭 Cave Maze</h1>
+  <p><a href="index.html">← Back to games</a></p>
+</header>
+
+<main>
+  <canvas id="maze" width="400" height="400"></canvas>
+</main>
+
+<script>
+const canvas = document.getElementById("maze");
+const ctx = canvas.getContext("2d");
+
+let player = { x: 20, y: 20, size: 10 };
+
+document.addEventListener("keydown", e => {
+  if (e.key === "ArrowUp") player.y -= 10;
+  if (e.key === "ArrowDown") player.y += 10;
+  if (e.key === "ArrowLeft") player.x -= 10;
+  if (e.key === "ArrowRight") player.x += 10;
+  draw();
+});
+
+function draw() {
+  ctx.clearRect(0,0,400,400);
+  ctx.fillStyle = "white";
+  ctx.fillRect(player.x, player.y, player.size, player.size);
+}
+
+draw();
+</script>
+</body>
+</html>

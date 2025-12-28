@@ -55,14 +55,32 @@ main {
   margin: auto;
 }
 
-section {
-  margin-bottom: 3rem;
-}
-
+/* Default h2 styling */
 h2 {
-  color: var(--accent);
   margin-bottom: 0.5rem;
 }
+
+/* Rainbow colors per section using IDs */
+section#What is Speleometeorology? h2 {
+  color: #FF0000; /* Red */
+}
+
+section#Biography h2 {
+  color: #FF7F00; /* Orange */
+}
+
+section#Research Areas h2 {
+  color: #FFFF00; /* Yellow */
+}
+
+section#Projects & Data h2 {
+  color: #00FF00; /* Green */
+}
+
+section#Contact h2 {
+  color: #0000FF; /* Blue */
+}
+
 
 a {
   color: var(--accent);

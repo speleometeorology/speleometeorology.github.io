@@ -34,21 +34,49 @@
 </footer>
 
 <script>
+const TOP_HEIGHT = 225;
+const VISUAL_TOP = 260;
+
 let height = 0;
+let selected = false;
+
 const climber = document.getElementById("climber");
 const heightDisplay = document.getElementById("height");
+const instructions = document.getElementById("instructions");
+const avatars = document.querySelectorAll(".avatar");
 
+// Avatar selection
+avatars.forEach(avatar => {
+  avatar.style.background = avatar.dataset.color;
+
+  avatar.addEventListener("click", () => {
+    avatars.forEach(a => a.classList.remove("selected"));
+    avatar.classList.add("selected");
+
+    climber.style.background = avatar.dataset.color;
+    selected = true;
+  });
+});
+
+// Rope climbing
 document.addEventListener("keydown", (e) => {
-  if (e.code === "Space") {
-    height++;
-    heightDisplay.textContent = "Height: " + height + " m";
+  if (!selected) return;
 
-    // Move climber up visually
-    let bottom = parseInt(getComputedStyle(climber).bottom);
-    climber.style.bottom = Math.min(bottom + 5, 260) + "px";
+  if (e.code === "Space" && height < TOP_HEIGHT) {
+    height++;
+    heightDisplay.textContent = "Height: " + height + " ft";
+
+    const climbRatio = height / TOP_HEIGHT;
+    climber.style.bottom = (climbRatio * VISUAL_TOP) + "px";
+
+    if (height >= TOP_HEIGHT) {
+      instructions.textContent = "🎉 You reached the top!";
+      climber.style.background = "#FFD700";
+    }
   }
 });
 </script>
+
 
 </body>
 </html>

@@ -438,13 +438,15 @@ footer {
   margin-bottom: 1rem;
 }
 
+/* Avatar container */
 .avatars {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem; /* increase gap for bigger avatars */
   margin-top: 0.5rem;
 }
 
+/* Individual avatar */
 .avatar {
   display: flex;
   flex-direction: column;
@@ -452,20 +454,22 @@ footer {
   cursor: pointer;
   border: 2px solid transparent;
   border-radius: 8px;
-  padding: 4px;
+  padding: 6px; /* slightly larger padding */
   transition: transform 0.2s, border-color 0.2s;
 }
 
+/* Avatar image */
 .avatar img {
-  width: 60px;
-  height: 60px;
+  width: 100px;  /* increased from 60px */
+  height: 100px; /* increased from 60px */
   border-radius: 50%;
   object-fit: cover;
 }
 
+/* Avatar name label */
 .avatar-name {
   margin-top: 0.25rem;
-  font-size: 0.9rem;
+  font-size: 1rem; /* slightly larger font */
   color: var(--fg);
   text-align: center;
 }
@@ -473,5 +477,6 @@ footer {
 /* Selected avatar highlight */
 .avatar.selected {
   border-color: #FFD700;
-  transform: scale(1.1);
+  transform: scale(1.15); /* slightly bigger scale on selection */
 }
+

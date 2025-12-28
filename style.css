@@ -354,3 +354,37 @@ footer {
     opacity: 0;
   }
 }
+
+
+/* Game page */
+#game {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#game-area {
+  position: relative;
+  height: 350px;
+  max-width: 800px;
+  margin: auto;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.bat {
+  position: absolute;
+  width: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Airflow Dodge</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<header>
+  <h1>🌬️ Airflow Dodge</h1>
+  <p><a href="index.html">← Back to games</a></p>
+</header>
+
+<main>
+  <div id="game-area"></div>
+</main>
+
+<script>
+const area = document.getElementById("game-area");
+area.style.height = "300px";
+
+let player = document.createElement("div");
+player.style.width = "20px";
+player.style.height = "20px";
+player.style.background = "white";
+player.style.position = "absolute";
+player.style.left = "140px";
+player.style.top = "140px";
+area.appendChild(player);
+
+document.addEventListener("mousemove", e => {
+  const rect = area.getBoundingClientRect();
+  player.style.left = e.clientX - rect.left + "px";
+  player.style.top = e.clientY - rect.top + "px";
+});
+</script>
+</body>
+</html>

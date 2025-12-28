@@ -83,8 +83,12 @@ section#projects h2 {
   color: #00FF00; /* Green */
 }
 
-section#contact h2 {
+section#resources h2 {
   color: #0000FF; /* Blue */
+}
+
+section#contact h2 {
+  color: ##800080F; /* Blue */
 }
 
 
@@ -217,6 +221,45 @@ footer {
   margin-top: 0.3rem;
   font-style: italic;
 }
+
+/* Resources cards container */
+.resource-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Individual card styling */
+.resource-cards .card {
+  display: block;
+  padding: 1.5rem;
+  background-color: #111; /* slightly lighter than main background */
+  border-radius: 12px;
+  border: 1px solid #222;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-decoration: none;
+  color: var(--fg);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.resource-cards .card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.resource-cards .card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Hover effect */
+.resource-cards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
 
 .bat {
   position: fixed;

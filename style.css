@@ -113,7 +113,7 @@ footer {
 .banner {
   width: 100%;
   overflow: hidden;
-  max-height: 100px;  /* adjust height as needed */
+  max-height: 300px;  /* adjust height as needed */
 }
 
 .banner img {

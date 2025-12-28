@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rope Climb | Speleometeorology Games</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>🧗 Rope Climb</h1>
+  <p class="tagline">Hit the SPACE bar as fast as you can to climb!</p>
+  <p><a href="index.html">← Back to games</a></p>
+</header>
+
+<main>
+  <section id="rope-game">
+
+    <div id="rope-area">
+      <div id="rope"></div>
+      <div id="climber"></div>
+    </div>
+
+    <p id="height">Height: 0 m</p>
+    <p id="instructions">Press <strong>SPACE</strong> repeatedly</p>
+
+  </section>
+</main>
+
+<footer>
+  © 2025 Speleometeorology · Vertical Edition
+</footer>
+
+<script>
+let height = 0;
+const climber = document.getElementById("climber");
+const heightDisplay = document.getElementById("height");
+
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Space") {
+    height++;
+    heightDisplay.textContent = "Height: " + height + " m";
+
+    // Move climber up visually
+    let bottom = parseInt(getComputedStyle(climber).bottom);
+    climber.style.bottom = Math.min(bottom + 5, 260) + "px";
+  }
+});
+</script>
+
+</body>
+</html>

@@ -61,23 +61,23 @@ h2 {
 }
 
 /* Rainbow colors per section using IDs */
-section#What is Speleometeorology? h2 {
+section#what h2 {
   color: #FF0000; /* Red */
 }
 
-section#Biography h2 {
+section#biography h2 {
   color: #FF7F00; /* Orange */
 }
 
-section#Research Areas h2 {
+section#researcg h2 {
   color: #FFFF00; /* Yellow */
 }
 
-section#Projects & Data h2 {
+section#projects h2 {
   color: #00FF00; /* Green */
 }
 
-section#Contact h2 {
+section#contact h2 {
   color: #0000FF; /* Blue */
 }
 

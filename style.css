@@ -233,25 +233,17 @@ footer {
 /* Individual card styling */
 .resource-cards .card {
   display: block;
-  padding: 1.5rem;
-  background-color: #111; /* slightly lighter than main background */
+  overflow: hidden;
   border-radius: 12px;
   border: 1px solid #222;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  text-decoration: none;
-  color: var(--fg);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.resource-cards .card h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: var(--accent);
-}
-
-.resource-cards .card p {
-  margin: 0;
-  color: var(--muted);
+.resource-cards .card img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Hover effect */

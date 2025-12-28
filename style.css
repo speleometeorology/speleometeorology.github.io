@@ -108,3 +108,19 @@ footer {
 .bio-container p {
   max-width: 650px;
 }
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.header-container img {
+  width: 150px;  /* adjust as needed */
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #222;
+}

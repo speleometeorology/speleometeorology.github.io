@@ -66,6 +66,73 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+/* Page layout */
+.layout {
+  display: flex;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  padding: 2rem 1.5rem;
+  background-color: #0f1216;
+  border-right: 1px solid #222;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  color: #800080; /* purple accent */
+}
+
+/* Sidebar links */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.sidebar li {
+  margin-bottom: 0.75rem;
+}
+
+.sidebar a {
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.sidebar a:hover {
+  color: var(--accent);
+}
+
+/* Main content spacing */
+.layout main {
+  flex: 1;
+  padding: 2rem 2.5rem;
+}
+
+/* Responsive: hide sidebar on small screens */
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #222;
+  }
+}
+
+
+
 /* Rainbow colors per section using IDs */
 section#what h2 {
   color: #FF0000; /* Red */

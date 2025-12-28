@@ -56,6 +56,13 @@
     <p id="instructions">Press <strong>SPACE</strong> or <strong>TAP SCREEN</strong> repeatedly</p>
 
   </section>
+
+  <section id="leaderboard-section">
+  <h3>🏆 Leaderboard</h3>
+  <p>Top rope climbers!</p>
+  <ol id="leaderboard-list"></ol>
+</section>
+
 </main>
 
 <footer>
@@ -68,12 +75,14 @@ const VISUAL_TOP = 280;
 
 let height = 0;
 let selected = false;
+let startTime = null;
 
 const climber = document.getElementById("climber");
 const heightDisplay = document.getElementById("height");
 const instructions = document.getElementById("instructions");
 const avatars = document.querySelectorAll(".avatar");
 const ropeArea = document.getElementById("rope-area");
+const leaderboardList = document.getElementById("leaderboard-list");
 
 // --- Avatar selection ---
 avatars.forEach(avatar => {
@@ -81,13 +90,13 @@ avatars.forEach(avatar => {
     avatars.forEach(a => a.classList.remove("selected"));
     avatar.classList.add("selected");
 
-    // Set climber background to avatar image
     climber.style.background = `url('${avatar.dataset.img}')`;
     climber.style.backgroundSize = "cover";
     climber.style.backgroundPosition = "center";
 
     selected = true;
     instructions.textContent = "Press SPACE or TAP the rope repeatedly!";
+    startTime = new Date().getTime();
   });
 });
 
@@ -102,9 +111,36 @@ function climb() {
   climber.style.bottom = (climbRatio * VISUAL_TOP) + "px";
 
   if (height >= TOP_HEIGHT) {
-    instructions.textContent = "🎉 You reached the top!";
+    const endTime = new Date().getTime();
+    const timeTaken = ((endTime - startTime)/1000).toFixed(2);
+    instructions.textContent = `🎉 You reached the top in ${timeTaken}s!`;
+
     climber.style.background = "#FFD700";
+
+    const playerName = prompt("Enter your name for the leaderboard:", "Player");
+    if (playerName) saveScore(playerName, timeTaken);
   }
+}
+
+// --- Leaderboard logic ---
+function saveScore(name, time) {
+  let leaderboard = JSON.parse(localStorage.getItem("ropeLeaderboard")) || [];
+  leaderboard.push({name, time});
+  // Sort ascending by fastest time
+  leaderboard.sort((a,b) => a.time - b.time);
+  leaderboard = leaderboard.slice(0,5); // top 5
+  localStorage.setItem("ropeLeaderboard", JSON.stringify(leaderboard));
+  renderLeaderboard();
+}
+
+function renderLeaderboard() {
+  const leaderboard = JSON.parse(localStorage.getItem("ropeLeaderboard")) || [];
+  leaderboardList.innerHTML = "";
+  leaderboard.forEach(entry => {
+    const li = document.createElement("li");
+    li.textContent = `${entry.name} - ${entry.time}s`;
+    leaderboardList.appendChild(li);
+  });
 }
 
 // --- Keyboard input ---
@@ -114,12 +150,15 @@ document.addEventListener("keydown", (e) => {
 
 // --- Mobile touch input ---
 ropeArea.addEventListener("touchstart", (e) => {
-  e.preventDefault(); // prevent scrolling
+  e.preventDefault();
   climb();
 });
 
-// Optional: allow mouse click on desktop
+// --- Desktop mouse click ---
 ropeArea.addEventListener("click", climb);
+
+// Render leaderboard on page load
+renderLeaderboard();
 </script>
 
 

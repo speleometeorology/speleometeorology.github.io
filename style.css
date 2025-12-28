@@ -40,7 +40,13 @@ header h1 {
   margin: 0;
   font-size: 2.5rem;
   letter-spacing: 0.02em;
+
+  /* Rainbow gradient text */
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 
 header p {
   max-width: 800px;

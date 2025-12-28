@@ -76,14 +76,17 @@ const avatars = document.querySelectorAll(".avatar");
 
 // Avatar selection
 avatars.forEach(avatar => {
-  avatar.style.background = avatar.dataset.color;
-
   avatar.addEventListener("click", () => {
     avatars.forEach(a => a.classList.remove("selected"));
     avatar.classList.add("selected");
 
-    climber.style.background = avatar.dataset.color;
+    // Use the avatar photo for the climber
+    climber.style.background = "url('" + avatar.dataset.img + "')";
+    climber.style.backgroundSize = "cover";
+    climber.style.backgroundPosition = "center";
+
     selected = true;
+    instructions.textContent = "Press SPACE repeatedly to climb!";
   });
 });
 

@@ -364,6 +364,7 @@ footer {
 /* Individual game card */
 .card {
   position: relative;
+  aspect-ratio: 1 / 1; 
   display: block;
   background: #111;
   border-radius: 12px;

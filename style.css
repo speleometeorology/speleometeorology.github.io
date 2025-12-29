@@ -362,7 +362,7 @@ footer {
 }
 
 /* Individual game card */
-.card {
+.game-cards {
   position: relative;
   aspect-ratio: 1 / 1;   /* 🔒 makes card square */
   border-radius: 12px;
@@ -375,7 +375,7 @@ footer {
 
 
 /* Card photo sizing */
-.card img {
+.game-cards img {
   position: absolute;
   inset: 0;               /* top:0 right:0 bottom:0 left:0 */
   width: 100%;
@@ -385,7 +385,7 @@ footer {
 }
 
 /* Caption overlay */
-.card .caption {
+.game-cards .caption {
   position: absolute;
   bottom: 0;
   width: 100%;

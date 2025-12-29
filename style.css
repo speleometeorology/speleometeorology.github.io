@@ -290,51 +290,48 @@ footer {
 }
 
 /* Resources cards container */
+/* ===========================
+   GENERIC RESOURCE CARDS
+   =========================== */
+
 .resource-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
 }
 
-/* Individual card styling */
-.resource-card .card {
+/* Resource card */
+.resource-card {
   display: block;
-  padding: 1.5rem;
-  background-color: #111; /* slightly lighter than main background */
+  padding: 1.25rem;
+  background: #111;
   border-radius: 12px;
-  border: 1px solid #222;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   text-decoration: none;
   color: var(--fg);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.resource-card .card h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: var(--accent);
-}
-
-.resource-card .card p {
-  margin: 0;
-  color: var(--muted);
-}
-
-/* Resource card base border */
-.resource-card .card {
-  position: relative;
-  border-radius: 12px;
-  background: #111;
   border: 1px solid #2a2a2a;
   transition: transform 0.2s ease;
+  position: relative;
+}
+
+/* Headings */
+.resource-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+}
+
+/* Body text */
+.resource-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 /* Rainbow border on hover */
-.resource-card .card::before {
+.resource-card::before {
   content: "";
   position: absolute;
-  inset: -2px; /* thickness of rainbow border */
+  inset: -2px;
   border-radius: 14px;
   background: linear-gradient(
     90deg,
@@ -351,16 +348,13 @@ footer {
   transition: opacity 0.2s ease;
 }
 
-/* Hover effect */
-.resource-card .card:hover::before {
+.resource-card:hover::before {
   opacity: 1;
 }
 
-.resource-card .card:hover {
+.resource-card:hover {
   transform: translateY(-2px);
 }
-
-
 
 
 

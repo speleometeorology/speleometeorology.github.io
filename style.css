@@ -223,7 +223,7 @@ footer {
 /* Text overlay on top of banner */
 .banner-text {
   position: absolute;
-  top: 50%;             /* vertically center */
+  top: 20%;             /* vertically center */
   left: 50%;            /* horizontally center */
   transform: translate(-50%, -50%);
   text-align: center;

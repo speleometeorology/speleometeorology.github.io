@@ -270,7 +270,7 @@ footer {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; /* standard */
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.9); /* optional for readability on banner */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.1); /* optional for readability on banner */
 }
 
 

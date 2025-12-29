@@ -228,7 +228,7 @@ footer {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;         /* text color on banner */
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.8); /* makes text visible */
+  text-shadow: 2px 2px 6px rgba(0,0,0,1); /* makes text visible */
 }
 
 /* Title styling (optional rainbow gradient) */
@@ -270,7 +270,7 @@ footer {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; /* standard */
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.8); /* optional for readability on banner */
+  text-shadow: 1px 1px 4px rgba(0,0,0,1); /* optional for readability on banner */
 }
 
 

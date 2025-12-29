@@ -41,14 +41,22 @@ const scoreDisplay = document.getElementById("score");
 
 function spawnBat() {
   const bat = document.createElement("img");
-  bat.src = "Bat2.png";
-  bat.className = "bat";
 
-  bat.style.top = Math.random() * (gameArea.clientHeight - 40) + "px";
+  // Random bat type
+  const types = [
+    { src: "games/bat.PNG.png", size: 30, speed: 2 },
+    { src: "games/Bat2.png", size: 45, speed: 3 },
+   ];
+  const type = types[Math.floor(Math.random() * types.length)];
+
+  bat.src = type.src;
+  bat.className = "bat";
+  bat.style.width = type.size + "px";
+
+  bat.style.top = Math.random() * (gameArea.clientHeight - type.size) + "px";
   bat.style.left = "-50px";
 
-  const speed = 2 + Math.random() * 3;
-
+  const speed = type.speed + Math.random(); // slight variation
   gameArea.appendChild(bat);
 
   let x = -50;
@@ -61,6 +69,16 @@ function spawnBat() {
       clearInterval(fly);
     }
   }, 20);
+
+  bat.addEventListener("click", () => hitBat(bat, fly));
+  bat.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    hitBat(bat, fly);
+  });
+
+  // Optional: flap animation
+  bat.style.animation = `flap ${0.2 + Math.random() * 0.2}s infinite ease-in-out`;
+}
 
   function hitBat(bat, fly) {
   score++;

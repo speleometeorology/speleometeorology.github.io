@@ -364,14 +364,15 @@ footer {
 /* Individual game card */
 .card {
   position: relative;
-  aspect-ratio: 1 / 1; 
-  display: block;
-  background: #111;
+  aspect-ratio: 1 / 1;   /* 🔒 makes card square */
   border-radius: 12px;
-  overflow: hidden;        /* 🔑 keeps image inside card */
+  overflow: hidden;
+  background: #111;
   text-decoration: none;
   color: white;
+  display: block;
 }
+
 
 /* Card photo sizing */
 .card img {

@@ -509,6 +509,21 @@ footer {
   margin-top: 2rem;
 }
 
+@keyframes flap {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.bat {
+  position: absolute;
+  height: auto;
+  cursor: pointer;
+  z-index: 1;
+  user-select: none;
+}
+
+
 #game-area {
   position: relative;
   width: 100%;

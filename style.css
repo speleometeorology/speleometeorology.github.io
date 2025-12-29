@@ -391,14 +391,14 @@ footer {
 
 /* Triangle play icon */
 .play-icon {
-  font-size: 3rem;
+  font-size: 5rem;
   line-height: 1;
   color: white;
 }
 
 /* Label text */
 .play-label {
-  font-size: 1rem;
+  font-size: 2rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--muted);

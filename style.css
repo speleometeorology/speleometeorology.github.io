@@ -158,6 +158,11 @@ section#contact h2 {
   color: #8A2BE2; /* Purple */
 }
 
+section#cave games h2 {
+  color: #FF0090; /* Magenta */
+}
+
+
 
 a {
   color: var(--accent);

@@ -61,23 +61,18 @@ header p {
   font-size: 1.1rem;
 }
 
-.header-text .subheader {
-  background: linear-gradient(
-    90deg,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
-  );
+header .subheader {
+  font-size: clamp(1rem, 4vw, 1.5rem); /* scales with screen width */
+  margin: 0.25rem 0;
 
+  /* Rainbow gradient */
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background-clip: text; /* standard */
 
-  font-weight: 500;
+  /* Optional: make it more readable */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 

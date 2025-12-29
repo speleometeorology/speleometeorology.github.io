@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cave Battle | Speleometeorology</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Battle game styling */
+    #battle-container {
+      text-align: center;
+      margin: 2rem auto;
+      max-width: 800px;
+    }
+
+    .avatars, .opponents {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+    }
+
+    .avatar, .opponent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      padding: 6px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .avatar img, .opponent img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .avatar-name {
+      margin-top: 0.25rem;
+      font-size: 1rem;
+      color: var(--fg);
+      text-align: center;
+    }
+
+    .avatar.selected {
+      border-color: #FFD700;
+      transform: scale(1.2);
+    }
+
+    .opponent.hit {
+      transform: scale(0.9);
+      opacity: 0.6;
+    }
+
+    #battle-log {
+      margin-top: 1rem;
+      font-size: 1rem;
+      min-height: 40px;
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Cave Avatar Battle</h1>
+  <p class="tagline">Select your avatar and defeat the remaining opponents!</p>
+  <p><a href="index.html">← Back to Games</a></p>
+</header>
+
+<main>
+  <div id="battle-container">
+    <h2>Select Your Avatar</h2>
+    <div class="avatars" id="avatar-select">
+      <div class="avatar" data-name="Bat">
+        <img src="../bat.PNG" alt="Bat">
+        <span class="avatar-name">Bat</span>
+      </div>
+      <div class="avatar" data-name="Cave Spirit">
+        <img src="../cavespirit.png" alt="Cave Spirit">
+        <span class="avatar-name">Cave Spirit</span>
+      </div>
+      <div class="avatar" data-name="Ghost Owl">
+        <img src="../ghostowl.png" alt="Ghost Owl">
+        <span class="avatar-name">Ghost Owl</span>
+      </div>
+      <div class="avatar" data-name="Spider">
+        <img src="../spider.png" alt="Spider">
+        <span class="avatar-name">Spider</span>
+      </div>
+      <div class="avatar" data-name="Mole">
+        <img src="../mole.png" alt="Mole">
+        <span class="avatar-name">Mole</span>
+      </div>
+    </div>
+
+    <h2>Opponents</h2>
+    <div class="opponents" id

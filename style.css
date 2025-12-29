@@ -294,9 +294,36 @@ footer {
   font-style: italic;
 }
 
+/* CV block inside biography */
+.cv-block {
+  margin-top: 1.5rem;
+}
+
+/* Desktop PDF embed */
 #cv-frame {
   width: 100%;
-  height: calc(100vh - 120px); /* leaves space for header/footer */
+  height: 80vh;
+  border: 1px solid #222;
+  border-radius: 8px;
+}
+
+/* Mobile link hidden on desktop */
+.cv-mobile {
+  display: none;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Mobile behavior */
+@media (max-width: 768px) {
+  #cv-frame {
+    display: none; /* hide embed on phones */
+  }
+
+  .cv-mobile {
+    display: block;
+    text-align: left;
+  }
 }
 
 /* Resources cards container */

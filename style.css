@@ -649,3 +649,27 @@ footer {
   transform: scale(1.15); /* slightly bigger scale on selection */
 }
 
+@media (max-width: 768px) {
+
+  .banner-container {
+    height: 300px; /* shorter banner on phones */
+  }
+
+  .banner-text {
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .banner-text .subheader {
+    font-size: 1.1rem;
+  }
+
+  .banner-text .tagline {
+    font-size: 0.95rem;
+  }
+}

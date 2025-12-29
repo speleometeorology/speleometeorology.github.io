@@ -534,7 +534,7 @@ footer {
   overflow: hidden;
 
   /* Cave background */
-  background: url('carlsbad-cavern-NYawn.jpg') no-repeat center center;
+  background: url('games/carlsbad-cavern-NYawn.jpg') no-repeat center center;
   background-size: cover;
 }
 

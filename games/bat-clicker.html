@@ -62,13 +62,19 @@ function spawnBat() {
     }
   }, 20);
 
-  bat.onclick = () => {
-    score++;
-    scoreDisplay.textContent = "Score: " + score;
-    bat.remove();
-    clearInterval(fly);
-  };
+  function hitBat(bat, fly) {
+  score++;
+  scoreDisplay.textContent = "Score: " + score;
+  bat.remove();
+  clearInterval(fly);
 }
+
+bat.addEventListener("click", () => hitBat(bat, fly));
+bat.addEventListener("touchstart", (e) => {
+  e.preventDefault(); // prevents triggering both touch + click
+  hitBat(bat, fly);
+});
+
 
 setInterval(spawnBat, 1200);
 </script>

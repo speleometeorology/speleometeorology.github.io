@@ -354,6 +354,28 @@ footer {
     opacity: 0;
   }
 }
+/* Game cards container (optional, for consistency) */
+.game-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Individual game card */
+.game-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #111;
+}
+
+/* Card photo sizing */
+.game-card img {
+  width: 100%;
+  height: 140px;          /* 🔽 controls photo height */
+  object-fit: cover;     /* crops nicely without distortion */
+  display: block;
+}
 
 
 /* Game page */

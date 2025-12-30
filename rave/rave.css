@@ -10,6 +10,17 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 75%;   /* 🔽 smaller image */
+  background-size: cover;
+  background-attachment: fixed;
+
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
 }
 
 .bat {

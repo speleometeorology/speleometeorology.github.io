@@ -5,6 +5,13 @@
   --muted: #9aa0a6;
 }
 
+body {
+  background-image: url("rainbow-cave.JPEG");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 60%;   /* 🔽 smaller image */
+}
+
 .bat {
   position: fixed;
   width: 40px; /* adjust bat size */

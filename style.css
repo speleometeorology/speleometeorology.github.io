@@ -119,6 +119,8 @@ h2 {
 
 
 /* Rainbow colors per section using IDs */
+
+/* INDEX */
 section#what h2 {
   color: #FF0000; /* Red */
 }
@@ -147,6 +149,22 @@ section#games h2 {
   color: #FF00FF; /* Magenta */
 }
 
+/* CAVE */
+#CAVE-overview h2 {
+  color: #FF0000; /* Red */
+}
+
+#CAVE-methods h2 {
+  color: #FF7F00; /* Orange */
+}
+
+#CAVE-status h2 {
+  color: #FFFF00; /* Yellow */
+}
+
+#CAVE-funding h2 {
+  color: #00FF00; /* Green */
+}
 
 
 a {

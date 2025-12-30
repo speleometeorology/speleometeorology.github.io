@@ -1,0 +1,64 @@
+:root {
+  --bg: #0b0e11;
+  --fg: #e6e6e6;
+  --accent: #4da3ff;
+  --muted: #9aa0a6;
+}
+
+.bat {
+  position: fixed;
+  width: 40px; /* adjust bat size */
+  height: auto;
+  z-index: 1000;
+  pointer-events: none;
+  animation-name: fly;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+#bat-storm-btn {
+  position: fixed;
+  bottom: env(safe-area-inset-bottom, 20px);
+  right: 20px;
+  z-index: 3000;
+
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+
+  background: radial-gradient(circle, #400 0%, #900 60%, #300 100%);
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+}
+
+#bat-storm-btn.active {
+  background: radial-gradient(circle, #ff0066, #660033);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 1);
+}
+
+.jumper {
+  position: fixed;
+  width: clamp(80px, 20vw, 140px);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  will-change: transform;
+  transition: transform 0.3s ease;
+  pointer-events: none; /* avoids blocking taps */
+}

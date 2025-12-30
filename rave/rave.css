@@ -4,7 +4,10 @@
   --accent: #4da3ff;
   --muted: #9aa0a6;
 }
-
+body, html {
+  height: 100%;
+  margin: 0;
+}
 body {
   background-image: url("../rave/rainbow-cave.JPEG");
   background-repeat: no-repeat;

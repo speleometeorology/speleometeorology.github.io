@@ -9,7 +9,7 @@ body {
   background-image: url("rainbow-cave.JPEG");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 60%;   /* 🔽 smaller image */
+  background-size: 30%;   /* 🔽 smaller image */
 }
 
 .bat {

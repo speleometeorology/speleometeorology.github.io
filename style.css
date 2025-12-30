@@ -94,42 +94,6 @@ h2 {
   margin: auto;
 }
 
-/* Sidebar */
-.sidebar {
-  width: 220px;
-  padding: 2rem 1.5rem;
-  background-color: #0f1216;
-  border-right: 1px solid #222;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-}
-
-.sidebar h3 {
-  margin-top: 0;
-  color: #800080; /* purple accent */
-}
-
-/* Sidebar links */
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0;
-}
-
-.sidebar li {
-  margin-bottom: 0.75rem;
-}
-
-.sidebar a {
-  color: var(--fg);
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-.sidebar a:hover {
-  color: var(--accent);
-}
 
 /* Main content spacing */
 .layout main {
@@ -251,35 +215,6 @@ footer {
 }
 
 
-/* Text overlay on top of banner */
-.banner-text {
-  position: absolute;
-  top: 20%;             /* vertically center */
-  left: 50%;            /* horizontally center */
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;         /* text color on banner */
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.1); /* makes text visible */
-}
-
-/* Title styling (optional rainbow gradient) */
-.banner-text h1 {
-  font-size: 3rem;
-  margin: 0;
-
-  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Tagline styling */
-.banner-text .tagline {
-  font-size: 1.2rem;
-  color: var(--muted);
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
-}
-
-
 /* Header text below banner */
 .header-text {
   display: flex;
@@ -290,25 +225,7 @@ footer {
   margin-top: 1rem;
 }
 
-/* Sub-header below main title in banner */
-/* Sub-header below main title in banner with rainbow gradient */
-.banner-text .subheader {
-  font-size: 1.5rem;
-  margin: 0.5rem 0;
 
-  /* Rainbow gradient text */
-  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; /* standard */
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.1); /* optional for readability on banner */
-}
-.banner-text .subheader {
-  white-space: nowrap;        /* ⬅ keep it on one line */
-  max-width: 90%;
-  overflow: hidden;
-  text-overflow: ellipsis;    /* optional safety on very small screens */
-}
 
 
 /* Optional: smaller intro text */
@@ -579,7 +496,7 @@ footer {
 }
 
 /* Game page */
-#bat-clicker {
+#bat-netting {
   text-align: center;
   margin-top: 2rem;
 }

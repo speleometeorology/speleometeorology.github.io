@@ -76,5 +76,33 @@ for (let i = 0; i < 12; i++) {
 }
 </script>
 
+  <script>
+function spawnBatConfetti(x, y) {
+  const batCount = window.innerWidth < 600 ? 10 : 16;
+
+  for (let i = 0; i < batCount; i++) {
+    const bat = document.createElement("img");
+    bat.src = "bat.PNG";
+    bat.className = "bat-confetti";
+
+    bat.style.left = x + "px";
+    bat.style.top = y + "px";
+
+    bat.style.setProperty("--x", Math.random());
+    bat.style.animationDuration = (1.5 + Math.random()) + "s";
+
+    document.body.appendChild(bat);
+
+    bat.addEventListener("animationend", () => bat.remove());
+  }
+}
+
+// Mobile + desktop support
+document.addEventListener("pointerdown", (e) => {
+  spawnBatConfetti(e.clientX, e.clientY);
+});
+</script>
+
+  
 </body>
 </html>

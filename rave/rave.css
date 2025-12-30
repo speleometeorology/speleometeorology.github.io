@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url("rave/rainbow-cave.JPEG");
+  background-image: url("../rainbow-cave.JPEG");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -14,10 +14,6 @@ body {
 
   margin: 0;
   font-family: system-ui, sans-serif;
-}
-
-body {
-  background-color: black;
 }
 
 

@@ -16,6 +16,11 @@ body {
   font-family: system-ui, sans-serif;
 }
 
+body {
+  background-color: black;
+}
+
+
 @media (max-width: 768px) {
   body {
     background-attachment: scroll;

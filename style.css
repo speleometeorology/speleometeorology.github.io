@@ -469,6 +469,31 @@ footer {
     opacity: 0;
   }
 }
+
+
+.bat-confetti {
+  position: fixed;
+  width: 28px;
+  height: auto;
+  pointer-events: none;
+  z-index: 2000;
+  animation: bat-fall linear forwards;
+}
+
+@keyframes bat-fall {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(
+      calc(-100px + 200px * var(--x)),
+      100vh
+    ) scale(0.6) rotate(720deg);
+    opacity: 0;
+  }
+}
+
 /* Game cards container (optional, for consistency) */
 .game-cards {
   display: grid;

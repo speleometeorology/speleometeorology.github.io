@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cave Rave</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      overflow: hidden;
+      background: radial-gradient(circle at center, #111 0%, #000 70%);
+    }
+
+    .photo {
+      position: absolute;
+      width: 120px;
+      border-radius: 12px;
+      animation: dance linear infinite;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    @keyframes dance {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      25% {
+        transform: translate(50px, -40px) rotate(10deg);
+      }
+      50% {
+        transform: translate(-40px, 30px) rotate(-10deg);
+      }
+      75% {
+        transform: translate(30px, 50px) rotate(8deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="top-bar">
+  <a href="index.html">← Back to main site</a>
+</div>
+
+<script>
+const images = [
+  "Big Room Station 3.jpg",
+  "RColton-SW-CAVE.JPG",
+  "bat.PNG",
+  "Riannon, Spirit World Station, Carlsbad Caverns, NM (1).jpg"
+];
+
+for (let i = 0; i < 12; i++) {
+  const img = document.createElement("img");
+  img.src = images[i % images.length];
+  img.className = "photo";
+
+  img.style.top = Math.random() * window.innerHeight + "px";
+  img.style.left = Math.random() * window.innerWidth + "px";
+
+  img.style.animationDuration = (4 + Math.random() * 6) + "s";
+
+  document.body.appendChild(img);
+}
+</script>
+
+</body>
+</html>

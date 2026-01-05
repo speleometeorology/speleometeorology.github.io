@@ -16,7 +16,64 @@ body {
 }
 
 header {
-  padding: 1.5rem 1rem;
+  padding: clamp(1rem, 4vw, 2rem) 1rem;
+  border-bottom: 1px solid #222;
+}
+
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.header-container img {
+  width: 120px;  /* adjust as needed */
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #222;
+}
+
+header h1,
+header .subheader,
+header .tagline {
+  text-align: center;
+}
+
+
+header h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 6vw, 2.8rem);
+  letter-spacing: 0.02em;
+
+  /* Rainbow gradient text */
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+header p {
+  max-width: 800px;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+header .subheader {
+  font-size: clamp(1rem, 4vw, 1.5rem); /* scales with screen width */
+  margin: 0.25rem 0;
+
+  /* Rainbow gradient */
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* standard */
+
+  /* Optional: make it more readable */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
   border-bottom: 1px solid #222;
 }
 
